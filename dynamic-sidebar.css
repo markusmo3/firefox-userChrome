@@ -1,0 +1,25 @@
+/* SAUCE: https://github.com/ongots/Dynamic-sidebar/blob/master/userChrome.css */
+/* Dynamic sidebar */
+body {
+	--sidebar-width-min: 60px;
+	--sidebar-width: 300px;
+}
+#sidebar-header, #sidebar-splitter {display:none}
+#sidebar {height: 100%; width: var(--sidebar-width) !important}
+#appcontent {margin-left: var(--sidebar-width-min)}
+#sidebar-box:hover {max-width: var(--sidebar-width)}
+#sidebar-box {
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  max-width: var(--sidebar-width-min);
+  display: block;
+  transition: 90ms;
+  box-shadow: 0 0 8px 0 #00000064, 1px 0 0 0 #212121;
+  z-index: 1}
+[inFullscreen] #appcontent {margin-left: 1px}
+[inFullscreen] #sidebar-box:hover {max-width: var(--sidebar-width)}
+[inFullscreen] #sidebar-box {
+  max-width: 1px;
+  height: 100%;
+  top: 1px}

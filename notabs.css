@@ -1,0 +1,31 @@
+/* SAUCE: https://github.com/mbnuqw/sidebery */
+browser[blank], browser[pendingpaint] {
+	opacity: 1 !important;
+}
+#TabsToolbar {
+  visibility: collapse !important;
+}
+#nav-bar {
+	margin-top: -23px
+}
+
+/* Remove back button circle */
+#back-button:not(:hover),
+#back-button:not(:hover) > .toolbarbutton-icon {
+background: transparent !important;
+border: none !important;
+box-shadow: none !important;
+}
+
+#back-button:hover,
+#back-button:hover > .toolbarbutton-icon {
+border: none !important;
+border-radius: 2px !important;
+}  
+
+#back-button {
+	fill-opacity: 1 !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+.toolbarbutton-1 { opacity: 1 !important;}
